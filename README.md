@@ -6,3 +6,6 @@
 
 ### Lint checks
 ![Lint](https://github.com/oddzye/frontend-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
+
+### Demo
+[Click here to watch demo!](https://asciinema.org/a/L7jCWP1zByg83QLD3IDM3ohGc)
