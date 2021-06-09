@@ -7,5 +7,8 @@
 ### Lint checks
 ![Lint](https://github.com/oddzye/frontend-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
 
-### Demo
+### Brain Even Demo
 [Click here to watch demo!](https://asciinema.org/a/L7jCWP1zByg83QLD3IDM3ohGc)
+
+### Brain Calc Demo
+[Click here to watch demo!](https://asciinema.org/a/v4sjh8i2cC9HAAWJJZHrZCbgR)
