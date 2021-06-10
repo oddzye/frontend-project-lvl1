@@ -12,3 +12,6 @@
 
 ### Brain Calc Demo
 [Click here to watch demo!](https://asciinema.org/a/v4sjh8i2cC9HAAWJJZHrZCbgR)
+
+### Brain Gcd Demo
+[Click here to watch demo!](https://asciinema.org/a/2E5LUCTZGNuIkJFeIFPCWBrJ1)
