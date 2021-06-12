@@ -1,24 +1,17 @@
-import game from '../index.js';
-
-/** Генерация случайного числа от 1 до 100. */
-const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
+import game, { getRandomInt } from '../index.js';
 
 /** Генерация случайного оператора. */
-const generateRandomOperator = () => {
+const getOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
 };
 
-/** Генерация вопроса. */
-const getQuestion = () => `${generateRandomNumber()} ${generateRandomOperator()} ${generateRandomNumber()}`;
-
 /** Получение корректного ответа на вопрос. */
-const getCorrectAnswer = (question) => {
-  const [a, operator, b] = question.split(' ');
+const getAnswerByOperator = (a, b, operator) => {
   let result;
   switch (operator) {
     case '+':
-      result = Number(a) + Number(b);
+      result = a + b;
       break;
     case '-':
       result = a - b;
@@ -33,9 +26,16 @@ const getCorrectAnswer = (question) => {
   return `${result}`;
 };
 
-/** Получение вступительного сообщения игры. */
-const getInfoMessage = () => console.log('What is the result of the expression?');
+/** Возвращает объект, в котором находится вопрос для игры и ответ. */
+const getGameData = () => {
+  const a = getRandomInt(1, 100);
+  const b = getRandomInt(1, 100);
+  const operator = getOperator();
+  const correctAnswer = getAnswerByOperator(a, b, operator);
 
-const brainCalcGame = game(getInfoMessage, getQuestion, getCorrectAnswer);
+  return { question: `${a} ${operator} ${b}`, correctAnswer };
+};
+
+const brainCalcGame = game('What is the result of the expression?', getGameData);
 
 export default brainCalcGame;

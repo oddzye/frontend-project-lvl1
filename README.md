@@ -15,3 +15,6 @@
 
 ### Brain Gcd Demo
 [Click here to watch demo!](https://asciinema.org/a/2E5LUCTZGNuIkJFeIFPCWBrJ1)
+
+### Brain Progression Demo
+[Click here to watch demo!](https://asciinema.org/a/C0VgR2jFUTKt1exuRlJmns9YG)

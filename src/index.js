@@ -8,16 +8,18 @@ const greeting = () => {
   return name;
 };
 
+/** Получение вступительного сообщения игры. */
+const getInfoMessage = (text) => console.log(text);
+
 /** Базовый шаблон игры. */
-const gameTemplate = (getInfoMessage, getQuestion, getCorrectAnswer) => () => {
+const gameTemplate = (text, getGameData) => () => {
   const name = greeting();
-  getInfoMessage();
+  getInfoMessage(text);
   const MAX_COUNT_QUESTIONS = 3;
   for (let i = 0; i < MAX_COUNT_QUESTIONS; i += 1) {
-    const question = getQuestion();
+    const { question, correctAnswer } = getGameData();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = getCorrectAnswer(question);
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
@@ -28,6 +30,13 @@ const gameTemplate = (getInfoMessage, getQuestion, getCorrectAnswer) => () => {
     }
   }
   console.log(`Congratulations, ${name}!`);
+};
+
+/** Возвращает случайное число от min до max. */
+export const getRandomInt = (min, max) => {
+  const minValue = Math.ceil(min);
+  const maxValue = Math.floor(max);
+  return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
 };
 
 export default gameTemplate;
