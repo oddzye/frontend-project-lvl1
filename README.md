@@ -18,3 +18,6 @@
 
 ### Brain Progression Demo
 [Click here to watch demo!](https://asciinema.org/a/C0VgR2jFUTKt1exuRlJmns9YG)
+
+### Brain Prime Demo
+[Click here to watch demo!](https://asciinema.org/a/p5UNfFkRI0eBnDeQB4NCrUKtP)
