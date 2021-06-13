@@ -8,22 +8,16 @@ const getOperator = () => {
 
 /** Получение корректного ответа на вопрос. */
 const getAnswerByOperator = (a, b, operator) => {
-  let result;
   switch (operator) {
     case '+':
-      result = a + b;
-      break;
+      return a + b;
     case '-':
-      result = a - b;
-      break;
+      return a - b;
     case '*':
-      result = a * b;
-      break;
+      return a * b;
     default:
-      throw new Error('Неизвестный оператор');
+      throw new Error(`Неизвестный оператор: ${operator}`);
   }
-
-  return `${result}`;
 };
 
 /** Возвращает объект, в котором находится вопрос для игры и ответ. */
@@ -33,7 +27,7 @@ const getGameData = () => {
   const operator = getOperator();
   const correctAnswer = getAnswerByOperator(a, b, operator);
 
-  return { question: `${a} ${operator} ${b}`, correctAnswer };
+  return { question: `${a} ${operator} ${b}`, correctAnswer: `${correctAnswer}` };
 };
 
 const brainCalcGame = game('What is the result of the expression?', getGameData);
