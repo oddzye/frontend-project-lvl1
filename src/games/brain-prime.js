@@ -1,4 +1,4 @@
-import game, { getRandomInt } from '../index.js';
+import getGameTemplate, { getRandomInt } from '../index.js';
 
 /** Простое ли число. */
 const isPrime = (number) => {
@@ -23,4 +23,4 @@ const getGameData = () => {
   return { question: number, correctAnswer };
 };
 
-export default () => game('Answer "yes" if given number is prime. Otherwise answer "no".', getGameData);
+export default () => getGameTemplate('Answer "yes" if given number is prime. Otherwise answer "no".', getGameData);

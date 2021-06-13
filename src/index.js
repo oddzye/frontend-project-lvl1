@@ -12,7 +12,7 @@ const greeting = () => {
 const getInfoMessage = (text) => console.log(text);
 
 /** Базовый шаблон игры. */
-const gameTemplate = (text, getGameData) => {
+const getGameTemplate = (text, getGameData) => {
   const name = greeting();
   getInfoMessage(text);
   const MAX_COUNT_QUESTIONS = 3;
@@ -39,4 +39,4 @@ export const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
 };
 
-export default gameTemplate;
+export default getGameTemplate;

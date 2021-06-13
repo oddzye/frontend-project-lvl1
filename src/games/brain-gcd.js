@@ -1,4 +1,4 @@
-import game, { getRandomInt } from '../index.js';
+import getGameTemplate, { getRandomInt } from '../index.js';
 
 /** Поиск наибольшего общего делителя. */
 const gcd = (a, b) => {
@@ -17,4 +17,4 @@ const getGameData = () => {
   return { question: `${a} ${b}`, correctAnswer: `${gcd(a, b)}` };
 };
 
-export default () => game('Find the greatest common divisor of given numbers.', getGameData);
+export default () => getGameTemplate('Find the greatest common divisor of given numbers.', getGameData);

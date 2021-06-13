@@ -1,4 +1,4 @@
-import game, { getRandomInt } from '../index.js';
+import getGameTemplate, { getRandomInt } from '../index.js';
 
 /** Проверка числа на чётность. */
 const isEven = (num) => num % 2 === 0;
@@ -10,4 +10,4 @@ const getGameData = () => {
   return { question: number, correctAnswer };
 };
 
-export default () => game('Answer "yes" if the number is even, otherwise answer "no".', getGameData);
+export default () => getGameTemplate('Answer "yes" if the number is even, otherwise answer "no".', getGameData);

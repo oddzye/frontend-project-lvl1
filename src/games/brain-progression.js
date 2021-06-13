@@ -1,4 +1,4 @@
-import game, { getRandomInt } from '../index.js';
+import getGameTemplate, { getRandomInt } from '../index.js';
 
 /** Возвращает объект, в котором находится вопрос для игры и ответ. */
 const getGameData = () => {
@@ -24,4 +24,4 @@ const getGameData = () => {
   return { question: progression, correctAnswer };
 };
 
-export default () => game('What number is missing in the progression?', getGameData);
+export default () => getGameTemplate('What number is missing in the progression?', getGameData);

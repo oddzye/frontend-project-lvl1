@@ -1,4 +1,4 @@
-import game, { getRandomInt } from '../index.js';
+import getGameTemplate, { getRandomInt } from '../index.js';
 
 /** Генерация случайного оператора. */
 const getOperator = () => {
@@ -31,4 +31,4 @@ const getGameData = () => {
   return { question, correctAnswer };
 };
 
-export default () => game('What is the result of the expression?', getGameData);
+export default () => getGameTemplate('What is the result of the expression?', getGameData);
