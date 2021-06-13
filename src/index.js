@@ -1,21 +1,18 @@
 import readlineSync from 'readline-sync';
 
-/** Знакомство с пользователем. */
-const greeting = () => {
+const MAX_COUNT_QUESTIONS = 3;
+
+/**
+ * Базовый шаблон игры.
+ * @param {string} gameIntroMessage Вступительное сообщение игры.
+ * @param {Function} getGameData Получение вопроса и правильного ответа.
+ */
+const getGameTemplate = (gameIntroMessage, getGameData) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
-  return name;
-};
+  console.log(gameIntroMessage);
 
-/** Получение вступительного сообщения игры. */
-const getInfoMessage = (text) => console.log(text);
-
-/** Базовый шаблон игры. */
-const getGameTemplate = (text, getGameData) => {
-  const name = greeting();
-  getInfoMessage(text);
-  const MAX_COUNT_QUESTIONS = 3;
   for (let i = 0; i < MAX_COUNT_QUESTIONS; i += 1) {
     const { question, correctAnswer } = getGameData();
     console.log(`Question: ${question}`);
