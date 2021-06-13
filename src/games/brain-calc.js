@@ -3,7 +3,7 @@ import game, { getRandomInt } from '../index.js';
 /** Генерация случайного оператора. */
 const getOperator = () => {
   const operators = ['+', '-', '*'];
-  return operators[Math.floor(Math.random() * operators.length)];
+  return operators[getRandomInt(0, operators.length - 1)];
 };
 
 /** Получение корректного ответа на вопрос. */
