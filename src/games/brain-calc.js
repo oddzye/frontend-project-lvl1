@@ -25,9 +25,10 @@ const getGameData = () => {
   const a = getRandomInt(1, 100);
   const b = getRandomInt(1, 100);
   const operator = getOperator();
-  const correctAnswer = getAnswerByOperator(a, b, operator);
+  const question = `${a} ${operator} ${b}`;
+  const correctAnswer = `${getAnswerByOperator(a, b, operator)}`;
 
-  return { question: `${a} ${operator} ${b}`, correctAnswer: `${correctAnswer}` };
+  return { question, correctAnswer };
 };
 
 const brainCalcGame = game('What is the result of the expression?', getGameData);
