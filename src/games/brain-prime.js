@@ -1,4 +1,5 @@
-import getGameTemplate, { getRandomInt } from '../index.js';
+import getGameTemplate from '../index.js';
+import getRandomInt from '../generator.js';
 
 /** Простое ли число. */
 const isPrime = (number) => {

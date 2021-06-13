@@ -1,4 +1,5 @@
-import getGameTemplate, { getRandomInt } from '../index.js';
+import getGameTemplate from '../index.js';
+import getRandomInt from '../generator.js';
 
 /** Поиск наибольшего общего делителя. */
 const gcd = (a, b) => {

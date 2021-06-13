@@ -1,4 +1,5 @@
-import getGameTemplate, { getRandomInt } from '../index.js';
+import getGameTemplate from '../index.js';
+import getRandomInt from '../generator.js';
 
 /** Проверка числа на чётность. */
 const isEven = (num) => num % 2 === 0;
