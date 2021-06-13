@@ -8,16 +8,16 @@
 ![Lint](https://github.com/oddzye/frontend-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
 
 ### Brain Even Demo
-[Click here to watch demo!](https://asciinema.org/a/L7jCWP1zByg83QLD3IDM3ohGc)
+[![asciicast](https://asciinema.org/a/L7jCWP1zByg83QLD3IDM3ohGc.svg)](https://asciinema.org/a/L7jCWP1zByg83QLD3IDM3ohGc)
 
 ### Brain Calc Demo
-[Click here to watch demo!](https://asciinema.org/a/v4sjh8i2cC9HAAWJJZHrZCbgR)
+[![asciicast](https://asciinema.org/a/v4sjh8i2cC9HAAWJJZHrZCbgR.svg)](https://asciinema.org/a/v4sjh8i2cC9HAAWJJZHrZCbgR)
 
 ### Brain Gcd Demo
-[Click here to watch demo!](https://asciinema.org/a/2E5LUCTZGNuIkJFeIFPCWBrJ1)
+[![asciicast](https://asciinema.org/a/2E5LUCTZGNuIkJFeIFPCWBrJ1.svg)](https://asciinema.org/a/2E5LUCTZGNuIkJFeIFPCWBrJ1)
 
 ### Brain Progression Demo
-[Click here to watch demo!](https://asciinema.org/a/C0VgR2jFUTKt1exuRlJmns9YG)
+[![asciicast](https://asciinema.org/a/C0VgR2jFUTKt1exuRlJmns9YG.svg)](https://asciinema.org/a/C0VgR2jFUTKt1exuRlJmns9YG)
 
 ### Brain Prime Demo
-[Click here to watch demo!](https://asciinema.org/a/p5UNfFkRI0eBnDeQB4NCrUKtP)
+[![asciicast](https://asciinema.org/a/p5UNfFkRI0eBnDeQB4NCrUKtP.svg)](https://asciinema.org/a/p5UNfFkRI0eBnDeQB4NCrUKtP)
