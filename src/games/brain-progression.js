@@ -1,27 +1,34 @@
 import getGameTemplate, { getRandomInt } from '../index.js';
 
-/** Возвращает объект, в котором находится вопрос для игры и ответ. */
-const getGameData = () => {
-  const startPos = 1;
-  const lastPos = 10;
-  const indexToHide = getRandomInt(startPos, lastPos);
-  const step = getRandomInt(1, 100);
-  let currentNumber = getRandomInt(1, 100);
-  let progression = '';
-  let correctAnswer;
+const getProgressionWithHiddenEl = (progression, indexToHide) => {
+  const result = [...progression];
+  result[indexToHide] = '..';
+  return result;
+};
 
-  for (let i = startPos; i <= lastPos; i += 1) {
-    if (i === indexToHide) {
-      progression += '.. ';
-      correctAnswer = String(currentNumber);
-    } else {
-      progression += `${currentNumber} `;
-    }
+const createProgression = (elementsCount, firstElement, step) => {
+  const result = [];
+  let currentElement = firstElement;
 
-    currentNumber += step;
+  for (let i = 1; i <= elementsCount; i += 1) {
+    result.push(currentElement);
+    currentElement += step;
   }
 
-  return { question: progression, correctAnswer };
+  return result;
+};
+
+/** Возвращает объект, в котором находится вопрос для игры и ответ. */
+const getGameData = () => {
+  const elementsCount = 10;
+  const firstElement = getRandomInt(1, 100);
+  const step = getRandomInt(1, 100);
+  const progression = createProgression(elementsCount, firstElement, step);
+  const indexToHide = getRandomInt(0, progression.length - 1);
+  const correctAnswer = `${progression[indexToHide]}`;
+  const progressionWithHiddenEl = getProgressionWithHiddenEl(progression, indexToHide);
+
+  return { question: progressionWithHiddenEl.join(' '), correctAnswer };
 };
 
 export default () => getGameTemplate('What number is missing in the progression?', getGameData);
