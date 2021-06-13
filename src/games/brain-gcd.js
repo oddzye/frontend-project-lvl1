@@ -13,8 +13,10 @@ const gcd = (a, b) => {
 const getGameData = () => {
   const a = getRandomInt(1, 100);
   const b = getRandomInt(1, 100);
+  const question = `${a} ${b}`;
+  const correctAnswer = `${gcd(a, b)}`;
 
-  return { question: `${a} ${b}`, correctAnswer: `${gcd(a, b)}` };
+  return { question, correctAnswer };
 };
 
 export default () => getGameTemplate('Find the greatest common divisor of given numbers.', getGameData);
