@@ -24,6 +24,4 @@ const getGameData = () => {
   return { question: progression, correctAnswer };
 };
 
-const brainProgressionGame = game('What number is missing in the progression?', getGameData);
-
-export default brainProgressionGame;
+export default () => game('What number is missing in the progression?', getGameData);

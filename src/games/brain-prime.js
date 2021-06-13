@@ -23,6 +23,4 @@ const getGameData = () => {
   return { question: number, correctAnswer };
 };
 
-const brainPrimeGame = game('Answer "yes" if given number is prime. Otherwise answer "no".', getGameData);
-
-export default brainPrimeGame;
+export default () => game('Answer "yes" if given number is prime. Otherwise answer "no".', getGameData);

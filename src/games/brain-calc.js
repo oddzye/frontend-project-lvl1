@@ -31,6 +31,4 @@ const getGameData = () => {
   return { question, correctAnswer };
 };
 
-const brainCalcGame = game('What is the result of the expression?', getGameData);
-
-export default brainCalcGame;
+export default () => game('What is the result of the expression?', getGameData);

@@ -17,6 +17,4 @@ const getGameData = () => {
   return { question: `${a} ${b}`, correctAnswer: `${gcd(a, b)}` };
 };
 
-const brainGcdGame = game('Find the greatest common divisor of given numbers.', getGameData);
-
-export default brainGcdGame;
+export default () => game('Find the greatest common divisor of given numbers.', getGameData);

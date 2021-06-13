@@ -10,6 +10,4 @@ const getGameData = () => {
   return { question: number, correctAnswer };
 };
 
-const brainEvenGame = game('Answer "yes" if the number is even, otherwise answer "no".', getGameData);
-
-export default brainEvenGame;
+export default () => game('Answer "yes" if the number is even, otherwise answer "no".', getGameData);

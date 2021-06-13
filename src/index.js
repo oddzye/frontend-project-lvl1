@@ -12,7 +12,7 @@ const greeting = () => {
 const getInfoMessage = (text) => console.log(text);
 
 /** Базовый шаблон игры. */
-const gameTemplate = (text, getGameData) => () => {
+const gameTemplate = (text, getGameData) => {
   const name = greeting();
   getInfoMessage(text);
   const MAX_COUNT_QUESTIONS = 3;
